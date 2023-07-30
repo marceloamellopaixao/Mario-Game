@@ -52,8 +52,6 @@ function gameOver(){
     titleGameOver.innerText = 'Game Over'
     titleGameOver.style.display = 'inline-block';
     titleGameOver.style.position = 'relative';
-    // titleGameOver.style.top = '110px';
-    // titleGameOver.style.left = '115px';
     titleGameOver.style.margin = '110px 170px'
     titleGameOver.style.fontSize = '32px';
     titleGameOver.style.fontWeight = 'bold';
