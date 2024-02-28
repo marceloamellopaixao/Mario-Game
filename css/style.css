@@ -25,20 +25,7 @@ body{
     animation: jump 500ms ease-out;
 }
 
-.pipe{
-    position: absolute;
-    width: 80px;
-    bottom: 0;
-    animation: pipe 1.8s linear infinite;
-}
-
-.clouds{
-    position: absolute;
-    width: 550px;
-    animation: clouds-animation 20s infinite linear;
-}
-
-/* Animation Game */
+/* Animation Jump */
 
 @keyframes jump{
     0%{
@@ -59,6 +46,15 @@ body{
     }
 }
 
+.pipe{
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    animation: pipe 1.8s linear infinite;
+}
+
+/* Animation Movimento do Cano */
+
 @keyframes pipe {
     from{
         right: -80px;
@@ -69,6 +65,14 @@ body{
     }
 }
 
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite ease;
+}
+
+/* Animation Movimento das Nuvens */
+
 @keyframes clouds-animation{
     from{
         right: -550px;
@@ -76,5 +80,48 @@ body{
 
     to{
         right: 100%;
+    }
+}
+
+/* .coin{
+    background-image: url(../img/coin.gif);
+    background-size: contain;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 85%;
+    animation: coin 3s linear infinite;
+}
+
+@keyframes coin {
+    from{
+        right: 0;
+    }
+
+    to{
+        right: 100%;
+    }
+} */
+
+/* Mantenha o CSS existente */
+
+.coin {
+    background-image: url(../img/coin.gif);
+    background-size: contain;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -50px;
+    top: 85%;
+    animation: coin 3s linear infinite;
+    
+}
+
+@keyframes coin {
+    from {
+        right: 0; /* Posição inicial fora da tela à direita */
+    }
+    to {
+        right: calc(100% + 50px); /* Tamanho da moeda (50px) + 100% para ir para a esquerda */
     }
 }
